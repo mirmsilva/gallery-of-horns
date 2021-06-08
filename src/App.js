@@ -2,7 +2,7 @@
 import './App.css';
 import React from 'react';
 import Header from './Header.js';
-import Main from './HornedBeasts.js';
+import Main from './Main.js';
 import Footer from './Footer';
 import HornedBeasts from './HornedBeasts.js';
 
