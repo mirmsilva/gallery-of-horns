@@ -2,10 +2,12 @@ import React from 'react';
 
 class Header extends React.Component{
   render(){
-    // header <h1>
+    // Welcome header
     return(
       <>
-      <h1>{this.props.header}</h1>
+      <header>
+        <h1>Hello, Welcome to The Gallery of Horns</h1>
+      </header>
       </>
     );
   }

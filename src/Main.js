@@ -1,17 +1,21 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
+import Data from './data.json';
+import { CardColumns } from 'react-bootstrap';
+
 
 class Main extends React.Component{
+  
   render(){
-
     return(
-      <>
-      <HornedBeasts title = "Horns 1" imageUrl = "https://d1nslcd7m2225b.cloudfront.net/Pictures/480xAny/2/2/7/1178227_horns_01.jpg" decription = "Daniel Radcliffe in horns"/>
-      <HornedBeasts title = "Horns 2" imageUrl = "https://d1nslcd7m2225b.cloudfront.net/Pictures/480xAny/2/2/7/1178227_horns_01.jpg" decription = "Daniel Radcliffe in horns two"/>
-      <HornedBeasts title = "Horns 3" imageUrl = "https://d1nslcd7m2225b.cloudfront.net/Pictures/480xAny/2/2/7/1178227_horns_01.jpg" decription = "Daniel Radcliffe in horns three"/>
-      </>
+      <CardColumns>
+      {Data.map((beasts, idx) =>
+      <HornedBeasts image_url = {beasts.image_url} title = {beasts.title} key={idx}/>
+        )}
+        </CardColumns>
     );
   }
 }
 
 export default Main;
+

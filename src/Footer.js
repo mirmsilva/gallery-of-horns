@@ -5,7 +5,7 @@ class Footer extends React.Component{
     //will contain my name as the author
     return(
       <>
-      <p>{this.props.footer}</p>
+      <p>This Page was created by Miriam. Thanks for stopping by!</p>
       </>
     );
   }
