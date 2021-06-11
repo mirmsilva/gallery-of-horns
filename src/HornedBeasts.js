@@ -28,9 +28,9 @@ class HornedBeasts extends React.Component{
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.state.favoriteCount}</Card.Text>
-          {/* <Card.Img  variant = "top" src = "https://www.publicdomainpictures.net/pictures/40000/velka/pink-heart.jpg"/> // try max width, height commented out until you can change size*/}
+          <Card.Text>{this.props.horns}</Card.Text>
           <Card.Text>{this.props.description}</Card.Text>
-          <Button variant = "primary" onClick={()=>this.props.showModal(this.props.title, this.props.description, this.props.image_url)}>Click Here to Learn More!</Button>
+          <Button variant = "primary" onClick={()=>this.props.showModal(this.props.title, this.props.horns, this.props.image_url, this.props.description)}>Click Here to Learn More!</Button>
         </Card.Body>
       </Card>
     );

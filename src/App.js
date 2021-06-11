@@ -15,12 +15,14 @@ class App extends React.Component{
     }
   }
 
-  showModal=(title, description,image_url)=>{
+  showModal=(title, horns, image_url, description)=>{
     this.setState({
       shouldShowModal: true,
       title: title,
+      horns: horns, 
+      image_url: image_url,
       description: description,
-      image_url: image_url
+      
     });
   }
   
@@ -35,6 +37,8 @@ class App extends React.Component{
       <>
       <SelectedBeast
       title={this.state.title}
+      horns={this.state.horns}
+      image_url={this.state.image_url}
       description={this.state.description}
       shouldShowModal={this.state.shouldShowModal}
       hideModal={this.hideModal}/>
